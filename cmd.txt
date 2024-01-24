@@ -1,0 +1,338 @@
+👉️cmd  to check in which we are present:
+chetan@chetan:~$ pwd
+/home/chetan
+
+👉️cmd to make a directory:
+chetan@chetan:~$ mkdir Devops
+
+👉️cmd to change from one directory to other:
+chetan@chetan:~$ cd Devops
+chetan@chetan:~/Devops$
+
+👉️cmd to create or modify the file:
+chetan@chetan:~/Devops$ touch Demo
+
+👉️cmd to write content into a file:
+chetan@chetan:~/Devops$ cat > Demo
+hello world
+chetan@chetan:~/Devops$ cat Demo
+hello world
+
+👉️cmd to install packages:
+chetan@chetan:~/Devops$ sudo apt install default-jre
+chetan@chetan:~/Devops$ sudo apt install default-jdk
+
+chetan@chetan:~/Devops$ javac --version
+javac 11.0.21
+
+👉️simple java program:
+chetan@chetan:~/Devops$ cat  HelloWorld.java
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!"); 
+    }
+}
+chetan@chetan:~/Devops$ javac HelloWorld.java
+chetan@chetan:~/Devops$ java HelloWorld
+Hello, World!
+
+👉️cmd to  list all files in directory:
+chetan@chetan:~/Devops$ ls
+Demo  Demo1.java  Demo.java  FibonacciExample1.java  HelloWorld.class  HelloWorld.java
+
+
+chetan@chetan:~/Devops$ mkdir New
+chetan@chetan:~/Devops$ ls
+Demo  Demo1.java  Demo.java  FibonacciExample1.java  HelloWorld.class  HelloWorld.java  New
+
+
+chetan@chetan:~/Devops$ ls
+Demo  Demo1.java  Demo.java  FibonacciExample1.java  HelloWorld.class  HelloWorld.java  New
+
+👉️cmd to find subdirectory:
+chetan@chetan:~/Devops$ ls -R
+.:
+Demo  Demo1.java  Demo.java  FibonacciExample1.java  HelloWorld.class  HelloWorld.java  New
+
+./New:
+new
+
+
+👉️cmd to list all directories:
+chetan@chetan:~/Devops$ ls -a
+.  ..  Demo  Demo1.java  Demo.java  FibonacciExample1.java  HelloWorld.class  HelloWorld.java  New
+
+👉️cmd to remove directory:
+chetan@chetan:~/Devops$ rm FibonacciExample1.java
+chetan@chetan:~/Devops$ ls
+Demo  Demo1.java  Demo.java  HelloWorld.class  HelloWorld.java  New
+
+
+
+chetan@chetan:~/Devops$ mkdir new
+chetan@chetan:~/Devops$ ls
+Demo  Demo1.java  Demo.java  HelloWorld.class  HelloWorld.java  new  New
+
+👉️cmd to move one file to other file:
+chetan@chetan:~/Devops$ mv new New1
+chetan@chetan:~/Devops$ ls
+Demo  Demo1.java  Demo.java  HelloWorld.class  HelloWorld.java  New  New1
+
+
+
+chetan@chetan:~/Devops$ ls -R
+.:
+Demo  Demo1.java  Demo.java  HelloWorld.class  HelloWorld.java  New1
+
+./New1:
+New
+
+./New1/New:
+
+
+
+chetan@chetan:~/Devops$ touch demo2
+chetan@chetan:~/Devops$ cat > demo2
+shgsfhfh
+hdfhdf
+ghdfhdf
+hfdhdfgh
+fghdfh
+dfhdf
+hdfhdfg
+hdfghfghdgfhjgfhd
+fghdfgh
+fghsdgf
+fghdfgh
+dfghdfgh
+fghdfg
+htdhd
+fthdfgjygy
+jfgjh
+fghkjhgjk
+
+
+👉️cmd to print first 10 lines in file:
+chetan@chetan:~/Devops$ head demo2
+shgsfhfh
+hdfhdf
+ghdfhdf
+hfdhdfgh
+fghdfh
+dfhdf
+hdfhdfg
+hdfghfghdgfhjgfhd
+fghdfgh
+fghsdgf
+
+
+👉️cmd to print last 10 lines of a file:
+chetan@chetan:~/Devops$ tail demo2
+hdfghfghdgfhjgfhd
+fghdfgh
+fghsdgf
+fghdfgh
+dfghdfgh
+fghdfg
+htdhd
+fthdfgjygy
+jfgjh
+fghkjhgjk
+
+👉️cmd to find file type:
+chetan@chetan:~/Devops$ file demo2
+demo2: ASCII text
+
+
+
+chetan@chetan:~/Devops$ cat demo1 demo2 > Demo
+cat: demo1: No such file or directory
+chetan@chetan:~/Devops$ cat demo2 Demo > demo1
+chetan@chetan:~/Devops$ ls
+Demo  demo1  Demo1.java  demo2  Demo.java  HelloWorld.class  HelloWorld.java  New1
+chetan@chetan:~/Devops$ cat demo1
+shgsfhfh
+hdfhdf
+ghdfhdf
+hfdhdfgh
+fghdfh
+dfhdf
+hdfhdfg
+hdfghfghdgfhjgfhd
+fghdfgh
+fghsdgf
+fghdfgh
+dfghdfgh
+fghdfg
+htdhd
+fthdfgjygy
+jfgjh
+fghkjhgjk
+shgsfhfh
+hdfhdf
+ghdfhdf
+hfdhdfgh
+fghdfh
+dfhdf
+hdfhdfg
+hdfghfghdgfhjgfhd
+fghdfgh
+fghsdgf
+fghdfgh
+dfghdfgh
+fghdfg
+htdhd
+fthdfgjygy
+jfgjh
+fghkjhgjk
+
+
+👉️cmd to count the characters in a file:
+chetan@chetan:~/Devops$ wc demo2
+ 17  17 145 demo2
+
+👉️cmd to list the lines in a file:
+chetan@chetan:~/Devops$ wc -l  demo2
+17 demo2
+
+
+chetan@chetan:~/Devops$ ls -l demo2
+-rw-rw-r-- 1 chetan chetan 145 jan 21 21:02 demo2
+
+
+👉️cmd to change the mode of a file:
+chetan@chetan:~/Devops$ chmod 644 demo2
+chetan@chetan:~/Devops$ ls -l demo2
+-rw-r--r-- 1 chetan chetan 145 jan 21 21:02 demo2
+
+
+
+chetan@chetan:~/Devops$ ls -c demo2
+demo2
+chetan@chetan:~/Devops$ ls -l demo2
+-rw-r--r-- 1 chetan chetan 145 jan 21 21:02 demo2
+chetan@chetan:~/Devops$ chmod 754 demo2
+chetan@chetan:~/Devops$ ls -l demo2
+-rwxr-xr-- 1 chetan chetan 145 jan 21 21:02 demo2
+
+👉️cmd to allow all to read and write a demo2 file:
+chetan@chetan:~/Devops$ chmod a+rw demo2
+chetan@chetan:~/Devops$ ls -l demo2
+-rwxrwxrw- 1 chetan chetan 145 jan 21 21:02 demo2
+
+👉️cmd to remove read,write to others in demo2:
+chetan@chetan:~/Devops$ chmod o-rw demo2
+chetan@chetan:~/Devops$ ls -l demo2
+-rwxrwx--- 1 chetan chetan 145 jan 21 21:02 demo2
+
+👉️cmd to remove read from group to demo2:
+chetan@chetan:~/Devops$ chmod g-r demo2
+chetan@chetan:~/Devops$ ls -l demo2
+-rwx-wx--- 1 chetan chetan 145 jan 21 21:02 demo2
+chetan@chetan:~/Devops$ chmod g+r demo2
+chetan@chetan:~/Devops$ ls -l demo2
+-rwxrwx--- 1 chetan chetan 145 jan 21 21:02 demo2
+chetan@chetan:~/Devops$ chmod g-w demo2
+chetan@chetan:~/Devops$ ls -l demo2
+-rwxr-x--- 1 chetan chetan 145 jan 21 21:02 demo2
+
+
+chetan@chetan:~/Devops$ ls -lR New1
+New1:
+total 8
+-rw-rw-r-- 1 chetan chetan   12 jan 21 20:09 Demo
+drwxrwxr-x 2 chetan chetan 4096 jan 21 20:55 New
+New1/New:
+total 0
+-rw-rw-r-- 1 chetan chetan 0 jan 21 20:55 try
+
+
+
+👉️cmd to zip a file:
+chetan@chetan:~/Devops$ touch demo.txt
+chetan@chetan:~/Devops$ cat > demo.txt
+    class FibonacciExample1{  
+    public static void main(String args[])  
+    {    
+     int n1=0,n2=1,n3,i,count=10;    
+     System.out.print(n1+" "+n2);//printing 0 and 1    
+        
+     for(i=2;i<count;++i)//loop starts from 2 because 0 and 1 are already printed    
+     {    
+      n3=n1+n2;    
+      System.out.print(" "+n3);    
+      n1=n2;    
+      n2=n3;    
+     }    
+      
+    }}  
+^C
+chetan@chetan:~/Devops$ ls
+Demo  demo1  Demo1.java  demo2  Demo.java  demo.txt  HelloWorld.class  HelloWorld.java  New1
+
+
+👉️cmd to unzip a file demo.txt:
+chetan@chetan:~/Devops$ gzip demo.txt
+chetan@chetan:~/Devops$ ls
+Demo  demo1  Demo1.java  demo2  Demo.java  demo.txt.gz  HelloWorld.class  HelloWorld.java  New1
+
+👉️cmd to copy from one file to another:
+chetan@chetan:~/Devops$ cp demo1 demo1.txt
+chetan@chetan:~/Devops$ ls
+Demo  demo1  Demo1.java  demo1.txt  demo2  Demo.java  demo.txt  HelloWorld.class  HelloWorld.java  New1
+
+
+
+chetan@chetan:~/Devops$ cat demo2
+shgsfhfh
+hdfhdf
+ghdfhdf
+hfdhdfgh
+fghdfh
+dfhdf
+hdfhdfg
+hdfghfghdgfhjgfhd
+fghdfgh
+fghsdgf
+fghdfgh
+dfghdfgh
+fghdfg
+htdhd
+fthdfgjygy
+jfgjh
+fghkjhgjk
+chetan@chetan:~/Devops$ ls -l demo2
+-rwxr-x--- 1 chetan chetan 145 jan 21 21:02 demo2
+
+👉️cmd to add group to directory:
+chetan@chetan:~/Devops$ sudo groupadd Arun
+[sudo] password for chetan: 
+chetan@chetan:~/Devops$ ls -l
+total 40
+-rw-rw-r-- 1 chetan chetan  145 jan 21 21:05 Demo
+-rw-rw-r-- 1 chetan chetan  290 jan 21 21:06 demo1
+-rw-rw-r-- 1 chetan chetan  394 jan 21 20:23 Demo1.java
+-rw-rw-r-- 1 chetan chetan  290 jan 21 21:44 demo1.txt
+-rwxr-x--- 1 chetan chetan  145 jan 21 21:02 demo2
+-rw-rw-r-- 1 chetan chetan  394 jan 21 20:22 Demo.java
+-rw-rw-r-- 1 chetan chetan  403 jan 21 21:38 demo.txt
+-rw-rw-r-- 1 chetan chetan  427 jan 21 20:45 HelloWorld.class
+-rw-rw-r-- 1 chetan chetan  118 jan 21 20:44 HelloWorld.java
+drwxrwxr-x 3 chetan chetan 4096 jan 21 20:57 New1
+
+
+👉️CMD TO CHANGE OWNER OF FILE:
+chetan@chetan:~/Devops$ sudo chown :Arun Demo
+chetan@chetan:~/Devops$ ls -l
+total 40
+-rw-rw-r-- 1 chetan Arun    145 jan 21 21:05 Demo
+-rw-rw-r-- 1 chetan chetan  290 jan 21 21:06 demo1
+-rw-rw-r-- 1 chetan chetan  394 jan 21 20:23 Demo1.java
+-rw-rw-r-- 1 chetan chetan  290 jan 21 21:44 demo1.txt
+-rwxr-x--- 1 chetan chetan  145 jan 21 21:02 demo2
+-rw-rw-r-- 1 chetan chetan  394 jan 21 20:22 Demo.java
+-rw-rw-r-- 1 chetan chetan  403 jan 21 21:38 demo.txt
+-rw-rw-r-- 1 chetan chetan  427 jan 21 20:45 HelloWorld.class
+-rw-rw-r-- 1 chetan chetan  118 jan 21 20:44 HelloWorld.java
+drwxrwxr-x 3 chetan chetan 4096 jan 21 20:57 New1
+
